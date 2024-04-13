@@ -2,7 +2,7 @@
 
 let width = 30;
 let height = 30;
-const size = 22;
+const size = 25;
 const board = document.querySelector('#board');
 const widthchange = document.querySelector('#width');
 const heightchange = document.querySelector('#height');
