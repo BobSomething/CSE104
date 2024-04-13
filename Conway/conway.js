@@ -14,8 +14,8 @@ function change(event) {
     width = widthchange.value;
     height = heightchange.value;
     board.innerHTML = '';
-    board.style.width = `${size*width+1}px`
-    board.style.height = `${size*height+1}px`
+    board.style.width = `${size*width+3}px`
+    board.style.height = `${size*height+3}px`
 
     for(let i=0; i<width*height; i++) {
         const newdiv = document.createElement('div');
