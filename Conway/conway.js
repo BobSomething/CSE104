@@ -12,6 +12,13 @@ heightchange.addEventListener('input', change);
 function change(event) {
     width = widthchange.value;
     height = heightchange.value;
+    board.innerHTML = '';
+    for(let i=0; i<width*height; i++) {
+        const newdiv = document.createElement('div');
+        newdiv.classList.add('cell');
+        console.log(1);
+        board.appendChild(newdiv);
+    }
 }
 
 for(let i=0; i<width*height; i++) {
@@ -20,3 +27,4 @@ for(let i=0; i<width*height; i++) {
     console.log(1);
     board.appendChild(newdiv);
 }
+
