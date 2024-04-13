@@ -13,7 +13,7 @@ h1 {
 .cell {
     width: 20px;
     height: 20px;
-    margin:1px;
+    margin:0;
     display:inline-block;
     border: solid 2px black;
     border-radius: 2px;
