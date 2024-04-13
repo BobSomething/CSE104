@@ -6,6 +6,7 @@ h1 {
     width:662px;
     height:662px;
     border: 2px solid black;
+    padding: 0px;
 }
 
 .cell {
