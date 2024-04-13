@@ -2,7 +2,7 @@
 
 let width = 30;
 let height = 30;
-const size = 20;
+const size = 21;
 const board = document.querySelector('#board');
 const widthchange = document.querySelector('#width');
 const heightchange = document.querySelector('#height');
@@ -14,8 +14,8 @@ function change(event) {
     width = widthchange.value;
     height = heightchange.value;
     board.innerHTML = '';
-    board.style.width = `${size*width}px`
-    board.style.height = `${size*height}px`
+    board.style.width = `${size*width+1}px`
+    board.style.height = `${size*height+1}px`
 
     for(let i=0; i<width*height; i++) {
         const newdiv = document.createElement('div');
