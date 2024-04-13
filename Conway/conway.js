@@ -8,5 +8,5 @@ for(let i=0; i<width; i++) {
     const newdiv = document.createElement('div');
     newdiv.classList.add('cell');
     console.log(1);
-    board.appendChild(newdiv);
+    //board.appendChild(newdiv);
 }
