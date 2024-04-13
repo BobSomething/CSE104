@@ -10,6 +10,7 @@ widthchange.addEventListener('input', change);
 heightchange.addEventListener('input', change);
 
 function change(event) {
+    console.log(1);
     width = widthchange.value;
     height = heightchange.value;
     board.innerHTML = '';
