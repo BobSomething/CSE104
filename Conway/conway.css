@@ -1,7 +1,11 @@
+h1 {
+    color: blue;
+}
+
 #board {
     width:500px;
     height:200px;
-    border: solid 2px black;
+    border: 2px solid black;
 }
 
 .cell {
