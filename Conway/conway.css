@@ -2,10 +2,7 @@ body {
     line-height: 1.5;
     text-align: center;
     font-size: 17px;
-<<<<<<< HEAD
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(106,203,140,1) 18%, rgba(162,134,177,1) 80%, rgba(7,52,61,1) 100%);
-=======
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 }
 
 #title {
@@ -20,10 +17,7 @@ body {
     width:30px;
     height:30px;
     transition: background-color 0.5s ease-in-out;
-<<<<<<< HEAD
     background-color: red;
-=======
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 }
 
 #help:hover {
@@ -48,10 +42,6 @@ a {
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 #board {
     text-align:center;
 }
@@ -60,11 +50,7 @@ a {
     width: 20px;
     height: 20px;
     margin:1px;
-<<<<<<< HEAD
     margin-bottom: -5px;
-=======
-    margin-bottom: 0px;
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
     margin-top: 0px;
     display:inline-block;
     border: solid 2px black;
@@ -107,7 +93,6 @@ a {
     background-color: rgb(235, 40, 40);
 }
 
-<<<<<<< HEAD
 #clear-button {
     background-color: lightgray;
 }
@@ -121,8 +106,3 @@ input, select {
     background-color:lightblue;
 
 }
-=======
-#clear-button:hover {
-    background-color: lightgray;
-}
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a

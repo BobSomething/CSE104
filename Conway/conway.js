@@ -26,11 +26,6 @@ function showHelp() {
 }
 
 
-<<<<<<< HEAD
-
-=======
-let width = 30;
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 let height = 30;
 
 let lights = {};
@@ -43,12 +38,9 @@ const heightchange = document.querySelector('#height');
 widthchange.addEventListener('input', change);
 heightchange.addEventListener('input', change);
 
-<<<<<<< HEAD
 widthchange.max = Math.floor(window.innerWidth/30);
 widthchange.value = Math.min(30,Math.floor(window.innerWidth/30));
 let width = parseInt(widthchange.value);
-=======
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 
 //Toggleable cells
 
@@ -58,17 +50,9 @@ function cellClicked(event) {
         lights[event.currentTarget.classList[1]] = 1;
     }
     else {
-<<<<<<< HEAD
         event.currentTarget.style.background = 'none';
         lights[event.currentTarget.classList[1]] = 0;
     }   
-=======
-        event.currentTarget.style.background = 'white';
-        lights[event.currentTarget.classList[1]] = 0;
-    }
-    console.log(lights)
-    
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 }
 
 //Setting the cells
@@ -96,11 +80,7 @@ function setCells() {
 setCells();
 
 
-<<<<<<< HEAD
 function change() {
-=======
-function change(event) {
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
     width = parseInt(widthchange.value);
     height = parseInt(heightchange.value);
     container.innerHTML = '';
@@ -117,7 +97,6 @@ isGame.addEventListener('click', game);
 const clear = document.querySelector('#clear-button');
 clear.addEventListener('click', change);
 
-<<<<<<< HEAD
 //helper functions
 
 function changingNeighbours(neigh) {
@@ -130,57 +109,19 @@ function changingNeighbours(neigh) {
             if(lights[`${i},${j}`] == 1) {
                 if(num < 2 || num > 3) {
                     current.style.background = 'none';
-=======
-
-//Standard
-
-function conway1() {
-    function neighbours(x,y) {
-        let count = 0;
-        for(let i=-1; i<=1; i++)
-        {
-            for(let j=-1; j<=1; j++)
-            {
-                if(i == 0 && j == 0) {continue;}
-                if(lights[`${x+i},${y+j}`] == 1) {count++;}
-            }
-        }
-        return count;
-    }
-    
-    let temp = {};
-    for(let i=0; i<height; i++) {
-        for(let j=0; j<width; j++) {
-            const num = neighbours(i,j);
-            const current = cords[`${i},${j}`];
-
-            if(lights[`${i},${j}`] == 1)
-            {
-                if(num < 2 || num > 3) {
-                    current.style.background = 'white';
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
                 }
                 else if(num == 2 || num == 3) temp[`${i},${j}`] = 1;
             } 
             else
-<<<<<<< HEAD
-=======
-            {
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
                 if(num == 3) {
                     temp[`${i},${j}`] = 1;
                     current.style.background = 'black';
                 }
-<<<<<<< HEAD
-=======
-            }
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
         }
     }
     lights = temp;
 }
 
-<<<<<<< HEAD
 function neighs(x,y,condition) {
     let count = 0;
     for(let i=-1; i<=1; i++)
@@ -219,57 +160,11 @@ function conway2() {
         return neighs(x,y,condition2);       
     }
     changingNeighbours(neighbours2);
-=======
-//Torus
-
-function conway2() {
-    function neighbours(x,y) {
-        let count = 0;
-        for(let i=-1; i<=1; i++)
-        {
-            for(let j=-1; j<=1; j++)
-            {
-                if(i == 0 && j == 0) {continue;}
-                let a = (height+x);
-                let b = (width+y);
-                a -= i; b -= j; a %= height; b %= width;
-                if(lights[`${a},${b}`] == 1) {count++;}
-            }
-        }
-        return count;
-        
-    }
-
-    let temp = {};
-    for(let i=0; i<height; i++) {
-        for(let j=0; j<width; j++) {
-            const num = neighbours(i,j);
-            const current = cords[`${i},${j}`];
-
-            if(lights[`${i},${j}`] == 1)
-            {
-                if(num < 2 || num > 3) {
-                    current.style.background = 'white';
-                }
-                else if(num == 2 || num == 3) temp[`${i},${j}`] = 1;
-            } 
-            else
-            {
-                if(num == 3) {
-                    temp[`${i},${j}`] = 1;
-                    current.style.background = 'black';
-                }
-            }
-        }
-    }
-    lights = temp;
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 }
 
 //Klein Bottle
 
 function conway3() {
-<<<<<<< HEAD
     function neighbours3(x, y) {
         function condition3(x,y,i,j) {
             let a = (height + x + i) % height;
@@ -305,94 +200,6 @@ function conway4() {
 }
 
 
-=======
-    function neighbors(x, y) {
-        let count = 0;
-        for (let i = -1; i <= 1; i++) {
-            for (let j = -1; j <= 1; j++) {
-                if (i === 0 && j === 0) { continue; }
-
-                let a = (height + x + i) % height;
-                let b = (width + y + j) % width;
-                if(x+i < 0 || x+i >= height) {
-                    b = width - b;
-                }
-                if (lights[`${a},${b}`] === 1) { count++; }
-            }
-        }
-        return count;
-    }
-
-    let temp = {};
-    for (let i = 0; i < height; i++) {
-        for (let j = 0; j < width; j++) {
-            const num = neighbors(i, j);
-            const current = cords[`${i},${j}`];
-
-            if (lights[`${i},${j}`] == 1) {
-                if (num < 2 || num > 3) {
-                    current.style.background = 'white';
-                } else if (num == 2 || num == 3) temp[`${i},${j}`] = 1;
-            } else {
-                if (num == 3) {
-                    temp[`${i},${j}`] = 1;
-                    current.style.background = 'black';
-                }
-            }
-        }
-    }
-    lights = temp;
-}
-
-
-//Cross surface
-
-function conway4() {
-    function neighbors(x, y) {
-        let count = 0;
-        for (let i = -1; i <= 1; i++) {
-            for (let j = -1; j <= 1; j++) {
-                if (i === 0 && j === 0) {continue;}
-
-                let a = (height + x + i) % height;
-                let b = (width + y + j) % width;
-                if(x+i < 0 || x+i >= height) {
-                    b = width - b;
-                }
-                if(y+j < 0 || y+j >= width) {
-                    a = height - a;
-                }
-
-                if (lights[`${a},${b}`] === 1) {count++;}
-            }
-        }
-        return count;
-    }
-
-    let temp = {};
-    for (let i = 0; i < height; i++) {
-        for (let j = 0; j < width; j++) {
-            const num = neighbors(i, j);
-            const current = cords[`${i},${j}`];
-
-            if (lights[`${i},${j}`] == 1) {
-                if (num < 2 || num > 3) {
-                    current.style.background = 'white';
-                } else if (num == 2 || num == 3) temp[`${i},${j}`] = 1;
-            } else {
-                if (num == 3) {
-                    temp[`${i},${j}`] = 1;
-                    current.style.background = 'black';
-                }
-            }
-        }
-    }
-    lights = temp;
-}
-
-
-
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 //Game Animation
 
 let gameOn = 0;
@@ -413,24 +220,15 @@ function game() {
     console.log(gameOn)
 }
 
-<<<<<<< HEAD
 //changing the type of board
 const type = document.querySelector('#type');
 type.addEventListener('input', changetype);
 
-=======
-const type = document.querySelector('#type');
-
-type.addEventListener('input', changetype);
-
-
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 let currentgame = conway1;
 let games = [conway1,conway2,conway3,conway4];
 
 function changetype(){
     currentgame = games[type.value];
-<<<<<<< HEAD
 }
 
 
@@ -439,24 +237,11 @@ const speed = document.querySelector('#speed');
 speed.addEventListener('input',changeSpeed);
 
 let currentSpeed = 2500/speed.value;
-=======
-    console.log(0);
-}
-
-const speed = document.querySelector('#speed');
-speed.addEventListener('input',changeSpeed);
-
-let currentSpeed = 500;
-
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 function changeSpeed() {
     currentSpeed = 2500/speed.value;
 }
 
-<<<<<<< HEAD
 //looping the game
-=======
->>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
 function gameoflife() {
     if(gameOn) {
         currentgame();
