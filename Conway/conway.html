@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="conway.css">
+    <script src="conway.js" defer></script>
+    <title> Conway's game of life </title>
+</head>
+
+<body>
+
+
+    <div id="title">
+        Conway's game of life
+        <button id="help">
+            ?
+        </button>
+        <div id="textHelp">
+            <strong>Game of life (Life)</strong> - is a cellular automaton devised by John Horton Conway.<br>
+
+            Every cell interacts with all its eight neighbours. At each step in time we have:
+
+            <ol>
+                <li>Any live cell with fewer than two live neighbors dies, as if by underpopulation.</li>
+                <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+                <li>Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
+                <li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+            </ol>
+
+            By interacting with the cells, you can set their state: black - alive; white - dead.<br>
+            You can also customize the grid with any length and height. <br>
+            Also you can pick a type of board on which the cells will live on. <br>
+            You can also adjust the speed of generating a new state. <br>
+
+            If you are ready with the initial state of the board, click on the START button, to stop the game
+<<<<<<< HEAD
+            click on the END button. We recommend to try one of the spaceships (found on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target=”_blank”>Reference</a>).
+            Have fun!<br>
+
+
+            <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target=”_blank”>Reference</a>
+        </div>
+    </div>
+    Height: <input id="height" type="number" value="30" min="1" max="100"><br>
+=======
+            click on the END button. We recommend to try one of the spaceships (found on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Reference</a>).
+            Have fun!<br>
+
+
+            <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Reference</a>
+        </div>
+    </div>
+    Height: <input id="height" type="number" value="30" min="1" max="60"><br>
+>>>>>>> 4d20eaa4a9e72c1cbf3fa40d1d34c4850432046a
+    Width: <input id="width" type="number" value="30" min="1" max="60"><br>
+    Type of board: <select id="type"><br>
+        <option value="0">Standard</option>
+        <option value="1">Torus</option>
+        <option value="2">Klein Bottle</option>
+        <option value="3">Cross Surface</option>
+      </select><br>
+    Speed: <input id="speed" type="range" value="7" min="1" max="30"><br>
+    
+    <div id="butcontainer">
+        <div id="start-button" class="button">START</div>
+        <div id="clear-button" class="button">CLEAR</div>
+    </div>
+
+    <div id="board"></div>
+</body>
+
+
+</html>
+

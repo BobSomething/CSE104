@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="sorting.css">
+    <script src="sorting.js" defer></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <title> Sorting Algorithms </title>
+</head>
+
+<body>
+    
+    <h1>Visualization of certain sorting algorithms</h1>
+    <div id="container">
+    <div class="intro" id="help">
+        <strong>How to use?</strong> <br>
+        <ul>
+            <li><em>Random button</em> - randomizing the display of blocks seen below.</li>
+            <li><em>Number</em> - pick the amount of blocks displayed</li>
+            <li><em>Type</em> - pick a type of algorithm</li>
+            <li><em>Speed</em> - adjust the speed of the algorithm</li>
+            <li><em>Start & Stop button</em> - start/stop the algorithm</li>
+        </ul>
+        
+    
+    </div>
+    <div class="intro" id="main">
+
+    <div class="button" id="random">Random</div> <br>
+    Number of blocks: <input id="number" type="number" value="10" min="1" max="200"><br>
+
+    Type of sorting algorithm: <select id="type"><br>
+        <option value="0">Bubble Sort</option>
+        <option value="1">Selection Sort</option>
+        <option value="2">Merge Sort</option>
+        <option value="3">Quick Sort</option>
+        <option value="4">Cocktail Sort</option>
+        <option value="5">Shell Sort</option>
+        <option value="6">Pancake Sort</option>
+        <option value="7">Gnome Sort</option>
+        <option value="8">Brick Sort</option>
+        <option value="9">Comb Sort</option>
+        <option value="10">Stooge Sort</option>
+        <option value="11">Bogo Sort</option>
+      </select><br>
+    
+    Speed: <input id="speed" type="range" value="5" min="1" max="10"><br>
+
+    <div class="button" id="start">Start</div> 
+
+    <div class="button" id="stop">Stop</div> 
+    <br>
+    </div>
+
+    <div class="intro" id="about">
+        <div id="0">
+            This is <strong>Bubble Sort</strong>: How it works?
+            <ul>
+                <li>It is comparing the current element with the one right next to it, 
+                    swapping their values if they are not inorder. This operation is repeated until the array is sorted.</li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(O(n)\) </li>
+                <li>Average performance: \(O(n^2)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Bubble_sort" target=”_blank”>Bubble Sort</a></li>
+            </ul>
+            
+        </div>
+
+        <div id="1">
+            This is <strong>Selection Sort</strong>: How it works? <br>
+            <ul>
+                <li>It divides the list into two sublist: left - sorted and right - unsorted. Then it proceed to find the smallest
+                    element in the unsorted sublist and exchanging it with the first element of the unsorted sublist.
+                </li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(O(n^2)\) </li>
+                <li>Average performance: \(O(n^2)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Selection_sort" target="_blank">Selection Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="2">
+            This is <strong>Merge Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It is based on the concept of divide-and-conquer. It first recursively divides the list into two halves. And then
+                    repeatedly merging sublists to produce a sorted list.
+                </li>
+                <li>Worst-case performance: \(O(n\log n)\) </li>
+                <li>Best-case performance: \(\Omega(n\log n)\) </li>
+                <li>Average performance: \(\Theta(n \log n)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Merge_sort" target="_blank">Merge Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="3">
+            This is <strong>Quick Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It is based on the concept of divide-and-conquer. It picks a <em>pivot</em> element from the list
+                    and dividing the other elements into two sublists, according to whether they are less or greater than the pivot.
+                </li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(O(n\log n)\) </li>
+                <li>Average performance: \(O(n \log n)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Quicksort" target="_blank">Quick Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="4">
+            This is <strong>Cocktail Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It is an extension of <a href="https://en.wikipedia.org/wiki/Bubble_sort" target=”_blank”>Bubble Sort</a>,
+                    it improves on operating in both directions, thus it moves more quickly elements to the beginning of the list.
+                </li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(O(n)\) </li>
+                <li>Average performance: \(O(n^2)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort" target="_blank">Cocktail Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="5">
+            This is <strong>Shell Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                   It starts with sorting pairs of elements far apart from each other, then progressively reducing the gap
+                   between elements to be compared.
+                </li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(O(n\log n)\) </li>
+                <li>Average performance: Depends on the gap sequence.</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Shellsort" target="_blank">Shell Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="6">
+            This is <strong>Pancake Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It is based on the Pancake Problem. It iterate from the length of the list to 0, finds the minimum of
+                    the sublist to the current length considered. And flips sublists to the minimum element.
+                </li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(O(n^2)\) </li>
+                <li>Average performance: \(0(n^2)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Pancake_sorting" target="_blank">Pancake Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="7">
+            This is <strong>Gnome Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It works by building a sorted list one element at a time, getting each item to the proper place in a series of swaps.
+
+                </li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(O(n)\) </li>
+                <li>Average performance: \(O(n^2)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Gnome_sort" target="_blank">Gnome Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="8">
+            This is <strong>Brick Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It is related to <a href="https://en.wikipedia.org/wiki/Bubble_sort" target=”_blank”>Bubble Sort</a>. It functions
+                    by comparing all odd/even indexed pairs of adjacent elements in the list and, if a pair is in the wrong order the elements are switched.
+                </li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(O(n)\) </li>
+                <li>Average performance: \(O(n^2)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Odd–even_sort" target="_blank">Brick Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="9">
+            This is <strong>Comb Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It is improved version of <a href="https://en.wikipedia.org/wiki/Bubble_sort" target=”_blank”>Bubble Sort</a>. 
+                    It compares elements that have a <em>gap</em> bigger than 1, and gradually the initial gap shrinks.
+                </li>
+                <li>Worst-case performance: \(O(n^2)\) </li>
+                <li>Best-case performance: \(\Omega(n\log n)\) </li>
+                <li>Average performance: \(\Theta(n^2/2^p)\), where \(p\) is the number of increments</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Comb_sort" target="_blank">Comb Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="10">
+            This is <strong>Stooge Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It swaps the first and the last element if they are not inorder. Then it tries to sort the initial \(2/3\)
+                    of the list, then it sorts the final \(2/3\) of the list and again sorts the initial \(2/3\) of the list.
+                </li>
+                <li>Worst-case performance: \(O(n^{\log 3 / \log 1.5})\) </li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Stooge_sort" target="_blank">Stooge Sort</a></li>
+            </ul>
+        </div>
+
+        <div id="11">
+            This is <strong>Bogo Sort</strong>: How it works? <br>
+            <ul>
+                <li>
+                    It shuffles the lists, and check if the lists is inorder. If it is, then the program terminates. 
+                    If not, then it tries again shuffling, and so on.
+                </li>
+                <li>Worst-case performance: \(O(?)\) - unbounded, with deterministic version \(O(n\cdot n!)\)</li>
+                <li>Best-case performance: \(\Omega(n)\) </li>
+                <li>Average performance: \(\Theta(n \cdot n!)\)</li>
+                <li>To find out more details: <a href="https://en.wikipedia.org/wiki/Bogosort" target="_blank">Bogo Sort</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+    <div id="displaying"></div>
+</body>
+
+
+
+</html>
