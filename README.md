@@ -1,5 +1,9 @@
+# CSE104 Web Project
+
 "Illusion of Choice" Project
+
 Created by: Sacha Gregoire and Hai An Mai
+
 For: CSE104 Web Project
 
 The website contains 5 mini projects:
