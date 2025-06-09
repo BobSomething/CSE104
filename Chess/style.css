@@ -1,0 +1,69 @@
+#home img {
+    position:fixed;
+    top:1%;
+    left:1%;
+    width:50px;
+    height:50px;
+    border-radius: 10%;
+    border:2px black solid;
+    cursor: pointer;
+}
+
+#home img:last-child {
+    display: none;  
+}
+#home:hover img:last-child {
+    display: block;  
+}
+#home:hover img:first-child {
+    display: none;  
+}
+
+body {
+	background-color: darkgray;
+	text-align: center;
+}
+
+#board {
+	display: inline-block;
+}
+
+.column {
+	display: inline-block;
+	background-color: white;
+	min-width: 100px;
+	min-height: 640px;
+	vertical-align: top;
+}
+
+#rules {
+	margin-right: 40px;
+}
+#winners {
+	font-size: 50px;
+}
+
+#history {
+	margin-left: 40px;
+}
+
+.square {
+	width: 80px;
+	height: 80px;
+	margin: 0px;
+	display: inline-block;
+}
+
+.piece {
+	width: 80px;
+	height: 80px;
+	margin: 0px;
+}
+
+.flipped { transform:rotateX(180deg) }
+
+.white { background-color: lavender; }
+.black { background-color: silver; }
+
+.selected { background-color: lightgreen;}
+.highlight { background-color: pink;}

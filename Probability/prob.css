@@ -1,0 +1,57 @@
+#home img {
+    position:fixed;
+    top:1%;
+    left:1%;
+    width:50px;
+    height:50px;
+    border-radius: 10%;
+    border:2px black solid;
+    cursor: pointer;
+}
+
+#home img:last-child {
+    display: none;  
+}
+#home:hover img:last-child {
+    display: block;  
+}
+#home:hover img:first-child {
+    display: none;  
+}
+
+body {
+    text-align: center;
+}
+
+#display {
+    height:600px;
+}
+
+.dot {
+    display: inline-block;
+}
+
+#b {
+    display: none;
+}
+
+#container {
+    display: flex;
+}
+
+.intro {
+    display: inline-block;
+    flex: 1;
+    margin:1px;
+    padding:5px;
+    line-height: 1.5;
+}
+
+#help {
+    margin-left:10px;
+    text-align: left;
+}
+
+ul {
+    margin-top:-3px;
+}

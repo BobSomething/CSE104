@@ -1,0 +1,94 @@
+#home img {
+    position:fixed;
+    top:1%;
+    left:1%;
+    width:50px;
+    height:50px;
+    border-radius: 10%;
+    border:2px black solid;
+    cursor: pointer;
+}
+
+#home img:last-child {
+    display: none;  
+}
+#home:hover img:last-child {
+    display: block;  
+}
+#home:hover img:first-child {
+    display: none;  
+}
+
+body, input, select {
+    text-align: center;
+    background-color: floralwhite;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;
+}
+
+#container {
+    display: flex;
+}
+
+ul {
+    margin:-2px;
+}
+
+.intro {
+    display: inline-block;
+    flex: 1;
+    margin:2px;
+    padding:5px;
+    border: 2px solid black;
+    border-radius: 5%;
+    line-height: 1.5;
+}
+
+#help {
+    text-align: left;
+}
+
+
+#about {
+    text-align:left;
+}
+
+.block {
+    width:20px;
+    height:40px;
+    display: inline-block;
+    border: 2px solid black;
+    background-color: lightcyan;
+    margin:1px;
+}
+
+#displaying {
+    border: 1px solid black;
+}
+
+.button {
+    height:30px;
+    padding-top:10px;
+    width:100px;
+    border: 3px solid black;
+    border-radius: 10%;
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: lightgray;
+}
+
+#about div {
+    display: none;
+}
+
+#about div[id="0"] {
+    display: block;
+}

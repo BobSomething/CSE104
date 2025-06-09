@@ -1,0 +1,9 @@
+square.addEventListener('click', foo);
+
+function foo(event) {
+	return;
+	if (selected) move(event);
+	else select(event);
+}
+
+console.log(event.currentTarget['row'], event.currentTarget['col']);

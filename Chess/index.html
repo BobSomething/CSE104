@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <title> Chess.come </title>
+</head>
+
+<body>
+
+    <div id="rules" class="column">
+        <div id="home" onclick="location.href='../index.html';">
+            <img src="../white.jpg" alt="Home page">
+            <img src="../black.jpg" alt="Go home?">
+        </div>
+        <h1>Chess</h1>
+        It's like normal <a href="https://en.wikipedia.org/wiki/Chess">chess</a>, but with a few quirks.<br>
+        No castling, no checks, and no en passant.<br>
+        First to capture the other's king wins.<br><br>
+        Invite your friend to play with you, or just play alone... Against yourself... We won't judge...<br>
+        <small>We would judge if we knew</small>
+        <div><br><button type="button">Restart</button><br></div>
+        <div id="winners"></div>
+    </div>
+    <div id="board"></div>
+    <div id="history" class="column"></div>
+
+</body>
+
+</html>

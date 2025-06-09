@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="typing.css">
+    <script src="typing.js" defer></script>
+    <title> Typing Challenge </title>
+</head>
+
+<body>
+    <div id="home" onclick="location.href='../index.html';">
+        <img src="../white.jpg" alt="Home page">
+        <img src="../black.jpg" alt="Go home?">
+    </div>
+
+    <h1>Typing Challenge</h1>
+
+    <div id="desc">
+        Welcome to the Typing Challenge! You can try to see how fast you can type.
+        You can choose the number of words, but also the type of words, including: <em>Nouns, Adjectives</em> and <em>Animals</em>
+    </div><br>
+
+    Number of words: <input type="number" id="numwords" value="30" max="200"> <br>
+
+    Type of words: <select id="type">
+        <option value="0">Random words</option>
+        <option value="1">Noun</option>
+        <option value="2">Adjective</option>
+        <option value="3">Animal</option>
+      </select><br>
+    
+    <div id="start">
+        START
+    </div><br>
+
+    <div id="box">
+        <span id="display"></span>
+    </div>
+    
+</body>
+
+
+
+</html>
+
